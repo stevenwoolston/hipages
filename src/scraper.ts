@@ -192,10 +192,10 @@ async function sendEmailNotification(lead: MatchedLead, elapsedTime?: string) {
 async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 	let newMatchFoundThisCycle = false;
 	try {
-		console.log(`\n[${new Date().toLocaleString()}] Reloading page and searching for articles...`);
+		console.log(`\n[${new Date().toLocaleString()}] Reloading page and searching for leads...`);
 		await page.reload({ waitUntil: 'networkidle2' });
-		const articlesOnPage = await page.$$eval('article', (articles, keywords, matchType) => {
-			return articles.map(article => {
+		const leadsOnPage = await page.$$eval('article', (leads, keywords, matchType) => {
+			return leads.map(article => {
 				const primaryLink = article.querySelector('a');
 				const id = article.id || (primaryLink ? primaryLink.href : article.outerHTML);
 				let hasMatch = false;
@@ -210,23 +210,11 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 					status = 'Already Waitlisted';
 				} else {
 					// 2. If not waitlisted, check for keywords in description elements.
-					let textToSearch = '';
-					const emphasisElement = article.querySelector('section > .text-body-emphasis');
-					if (emphasisElement) {
-						textToSearch = emphasisElement.textContent || '';
-					} else {
-						const allH4s = Array.from(article.querySelectorAll('h4'));
-						const jobDescH4 = allH4s.find(h4 => h4.textContent?.includes('Job Description'));
-						if (jobDescH4) {
-							const nextDiv = jobDescH4.nextElementSibling;
-							if (nextDiv && nextDiv.tagName === 'DIV') {
-								const pElement = nextDiv.querySelector('p');
-								if (pElement) {
-									textToSearch = pElement.textContent || '';
-								}
-							}
-						}
-					}
+					const headingText = Array.from(article.querySelectorAll('h2'))[0].textContent || '';
+					let textToSearch = headingText;
+					textToSearch += Array.from(document.querySelectorAll('.text-body-emphasis')).map(d => d.textContent).join(' ') || '';
+					textToSearch += Array.from(article.querySelectorAll('h4')).map(d => d.textContent).join(' ') || '';
+					textToSearch += Array.from(article.querySelectorAll('h4 + p')).map(d => d.textContent).join(' ') || '';
 
 					const lowerCaseTextToSearch = textToSearch.toLowerCase();
 					if (lowerCaseTextToSearch) {
@@ -237,6 +225,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 						}
 
 						if (hasMatch) {
+							console.log(`[${new Date().toLocaleString()}] 👍 Found a match. Setting it as a potential lead. Heading text is ${headingText}`);
 							status = 'Potential Lead';
 						}
 					}
@@ -252,9 +241,9 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 			});
 		}, KEYWORD_ARRAY, MATCH_TYPE);
 
-		console.log(`[${new Date().toLocaleString()}] Found ${articlesOnPage.length} articles on the page. Checking for matches...`);
+		console.log(`[${new Date().toLocaleString()}] Found ${leadsOnPage.length} leads on the page. Checking for matches...`);
 		let cacheUpdated = false;
-		for (const scrapedArticle of articlesOnPage) {
+		for (const scrapedArticle of leadsOnPage) {
 			const existingLeadIndex = cache.matchedLeads.findIndex(l => l.id === scrapedArticle.id);
 
 			if (existingLeadIndex === -1) {
@@ -282,15 +271,17 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 							const acceptLink = newLead.links.find(link => link.text.includes('Accept'));
 							// click acceptLink, get the HTML of the resulting page and take a screenshot of the resulting page
 							if (acceptLink && acceptLink.href) {
+								console.log(`[${new Date().toLocaleString()}] Found Potential Lead. The accept link is: ${acceptLink?.href}`);								
 								await page.goto(acceptLink.href);
-								const pageContent = await page.content();
 								const now = new Date();
 								const timestamp = now.toISOString().replace(/[:.]/g, '-');
-								await fs.writeFile(`src/screenshots/leads/newLead-${newLead.id}-${timestamp}.html`, pageContent, 'utf-8');
-								await page.screenshot({ path: `src/screenshots/leads/newLead-${newLead.id}-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
+								const pageContent = await page.content();
+								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the acceptance page.`);
+								await fs.writeFile(`src/screenshots/leads/acceptLead-${timestamp}.html`, pageContent, 'utf-8');
+								await page.screenshot({ path: `src/screenshots/leads/acceptLead-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
 							}
 						} catch (err) {
-							console.error(`[${new Date().toLocaleString()}] ERROR processing new lead ${newLead.id}:`, err);
+							console.error(`[${new Date().toLocaleString()}] ☠️ ERROR processing new lead ${newLead.id}:`, err);
 						} finally {
 							await sendEmailNotification(newLead);
 						}
@@ -325,7 +316,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 			await writeCache(cache);
 			console.log(`[${new Date().toLocaleString()}] Cache updated.`);
 		} else {
-			console.log(`[${new Date().toLocaleString()}] No new articles or status changes found this cycle.`);
+			console.log(`[${new Date().toLocaleString()}] No new leads or status changes found this cycle.`);
 		}
 	} catch (error) {
 		console.error('An error occurred during the page processing:', error);
@@ -377,7 +368,7 @@ async function main() {
 
 			if (!browser || !page) {
 				console.log(`\n[${new Date().toLocaleString()}] Operating hours have begun. Launching new browser instance...`);
-				browser = await puppeteer.launch({ headless: true });
+				browser = await puppeteer.launch({ headless: false });
 				page = await browser.newPage();
 				console.log(`\n[${new Date().toLocaleString()}] Performing initial navigation to ${HIPAGES_LEADS_URL}...`);
 				await page.goto(HIPAGES_LEADS_URL, { waitUntil: 'networkidle2' });

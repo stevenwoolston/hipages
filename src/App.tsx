@@ -63,7 +63,7 @@ function App() {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
             const data: Cache = await response.json();
-            setLeads(data.matchedLeads || []);
+            setLeads(data.matchedLeads.sort((b, a) => new Date(b.matchedOn).getTime() - new Date(a.matchedOn).getTime()) || []);
             setError(null);
             setLastUpdated(new Date());
         } catch (err) {
