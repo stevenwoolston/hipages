@@ -273,12 +273,16 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 							if (acceptLink && acceptLink.href) {
 								console.log(`[${new Date().toLocaleString()}] Found Potential Lead. The accept link is: ${acceptLink?.href}`);								
 								await page.goto(acceptLink.href);
+								sleep(1500);
+								await page.keyboard.press('Enter');	// Accept modal
 								const now = new Date();
 								const timestamp = now.toISOString().replace(/[:.]/g, '-');
 								const pageContent = await page.content();
 								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the acceptance page.`);
 								await fs.writeFile(`src/screenshots/leads/acceptLead-${timestamp}.html`, pageContent, 'utf-8');
 								await page.screenshot({ path: `src/screenshots/leads/acceptLead-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
+								sleep(5000);
+								await page.reload({ waitUntil: 'networkidle2' });
 							}
 						} catch (err) {
 							console.error(`[${new Date().toLocaleString()}] ☠️ ERROR processing new lead ${newLead.id}:`, err);
@@ -368,7 +372,7 @@ async function main() {
 
 			if (!browser || !page) {
 				console.log(`\n[${new Date().toLocaleString()}] Operating hours have begun. Launching new browser instance...`);
-				browser = await puppeteer.launch({ headless: false });
+				browser = await puppeteer.launch({ headless: true });
 				page = await browser.newPage();
 				console.log(`\n[${new Date().toLocaleString()}] Performing initial navigation to ${HIPAGES_LEADS_URL}...`);
 				await page.goto(HIPAGES_LEADS_URL, { waitUntil: 'networkidle2' });
@@ -401,7 +405,7 @@ async function main() {
 				continue;
 			}
 
-			if (todaysMatches.length === 1) {
+			if (todaysMatches.length === 2) {
 				const firstMatchTime = new Date(todaysMatches[0].matchedOn);
 				const noon = new Date();
 				noon.setHours(12, 0, 0, 0);
