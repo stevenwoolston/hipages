@@ -5,10 +5,10 @@
   "description": "A script to scrape hipages for leads containing a custom keyword and a React UI to display them.",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm:scrape\" \"npm:ui\"",
+    "dev": "source $HOME/.nvm/nvm.sh; nvm use 18 && concurrently \"npm:scrape\" \"npm:ui\"",
     "scrape": "node --loader ts-node/esm src/scraper.ts",
     "ui": "vite",
-    "build": "tsc && vite build",
+    "build": "source $HOME/.nvm/nvm.sh; nvm use 18 && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
