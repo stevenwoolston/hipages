@@ -1,52 +1,668 @@
 {
   "matchedLeads": [
     {
-      "id": "https://tradiecore.hipages.com.au/leads/0198bb42-a4d0-74dd-8d3f-185f1f3ee831/accept",
-      "matchedOn": "2025-09-01T01:23:13.520Z",
+      "id": "https://tradiecore.hipages.com.au/leads/01999967-f0fc-70e2-af24-f4ae947b9073/accept",
+      "matchedOn": "2025-09-30T07:06:36.281Z",
       "links": [
         {
-          "href": "https://tradiecore.hipages.com.au/leads/0198bb42-a4d0-74dd-8d3f-185f1f3ee831/accept",
+          "href": "https://tradiecore.hipages.com.au/leads/01999967-f0fc-70e2-af24-f4ae947b9073/accept",
           "text": "Join Waitlist"
         },
         {
-          "href": "https://tradiecore.hipages.com.au/leads/0198bb42-a4d0-74dd-8d3f-185f1f3ee831/decline",
+          "href": "https://tradiecore.hipages.com.au/leads/01999967-f0fc-70e2-af24-f4ae947b9073/decline",
           "text": "Decline"
         }
       ],
-      "content": "TTristan18th Aug 2025 - 1:39 pmWaitlist The Gap, 4061 Asbestos RemovalStart ByNext few weeksContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$49  - Lead Invitation",
+      "content": "DDavid30th Sep 2025 - 4:55 pmWaitlist Wavell Heights, 4012 Asbestos RemovalStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$40 $20   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-30T07:06:36.281Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250929/20250929_2fd8fa807f67942afc6ce5e0486b1ed0",
+      "matchedOn": "2025-09-29T02:33:22.962Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250929/20250929_2fd8fa807f67942afc6ce5e0486b1ed0",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01999307-aec3-7b31-9af9-03bcc7b006fb/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01999307-aec3-7b31-9af9-03bcc7b006fb/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "NNathan29th Sep 2025 - 11:13 amWaitlist Bracken Ridge, 4017 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?CeilingWhat type of job is this?Residential What type of dwelling is this?Other1 AttachmentJoin WaitlistDecline$44 $22   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-29T02:33:22.962Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01994aed-f41d-7db6-82f3-4ca650368008/accept",
+      "matchedOn": "2025-09-28T04:17:30.723Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01994aed-f41d-7db6-82f3-4ca650368008/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01994aed-f41d-7db6-82f3-4ca650368008/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "FFreeman15th Sep 2025 - 11:12 amWaitlist Slacks Creek, 4127 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionFence removal on one side of the property around 30mWhat service do you require?Small clean upWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$50  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:30.723Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01994b6f-3d5c-7d85-b60b-7d0d3d2a3dc5/accept",
+      "matchedOn": "2025-09-28T04:17:30.116Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01994b6f-3d5c-7d85-b60b-7d0d3d2a3dc5/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01994b6f-3d5c-7d85-b60b-7d0d3d2a3dc5/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "GGeoff15th Sep 2025 - 1:33 pmWaitlist Caboolture, 4510 Asbestos RemovalStart ByI'm flexibleContact Details Phone number verified Email address verifiedJob DescriptionAsbestos Removal ServicesWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$45  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:30.116Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01995be7-a63a-7af1-bcb1-106e1b172cdc/accept",
+      "matchedOn": "2025-09-28T04:17:29.587Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01995be7-a63a-7af1-bcb1-106e1b172cdc/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01995be7-a63a-7af1-bcb1-106e1b172cdc/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "VVinay18th Sep 2025 - 6:18 pmWaitlist Carseldine, 4034 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionAsbestosWhat service do you require?Small clean upWhere is the asbestos located?UnsureWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$44  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:29.587Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01996f4f-b5a7-7064-961f-c3082b5c7ccd/accept",
+      "matchedOn": "2025-09-28T04:17:28.923Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01996f4f-b5a7-7064-961f-c3082b5c7ccd/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01996f4f-b5a7-7064-961f-c3082b5c7ccd/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "GGiulian22nd Sep 2025 - 12:45 pmWaitlist Redcliffe, 4020 Asbestos InspectionsStart ByNext few daysContact Details Contact details: SuppliedJob DescriptionAsbestos InspectorWhere is the asbestos located?Walls, CeilingWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$43  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:28.923Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01996f76-6d58-7ed3-9182-4cb563957c1a/accept",
+      "matchedOn": "2025-09-28T04:17:28.299Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01996f76-6d58-7ed3-9182-4cb563957c1a/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01996f76-6d58-7ed3-9182-4cb563957c1a/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "NNigel22nd Sep 2025 - 1:27 pmWaitlist Woodridge, 4114 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionAsbestos 14.3m Fence Removal ServiceWhat service do you require?Small clean upWhere is the asbestos located?UnsureWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$47  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:28.299Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250923/20250923_091009f88465acd014ebaf2aad50d671",
+      "matchedOn": "2025-09-28T04:17:27.722Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250923/20250923_091009f88465acd014ebaf2aad50d671",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199741a-443c-72b9-a1d6-1960be4f583b/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199741a-443c-72b9-a1d6-1960be4f583b/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "SSteve23rd Sep 2025 - 11:05 amWaitlist Oxley, 4075 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionApprox 25m2 of ceilings and soffits. Need it removed on ThursdayWhere is the asbestos located?CeilingWhat type of job is this?Residential What type of dwelling is this?House1 AttachmentJoin WaitlistDecline$54 $27   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:27.722Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250923/20250923_cd4a11620847eba202ab308a33a18383",
+      "matchedOn": "2025-09-28T04:17:27.162Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250923/20250923_cd4a11620847eba202ab308a33a18383",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250923/20250923_d049ff757096e921e23d1175cafd678a",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01997424-a7d5-7131-8635-a069a3b10852/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01997424-a7d5-7131-8635-a069a3b10852/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "KKirstin23rd Sep 2025 - 11:16 amWaitlist Indooroopilly, 4068 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?Apartment2 AttachmentsJoin WaitlistDecline$44 $22   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:27.162Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01997921-9d27-774e-906a-a230061cb016/accept",
+      "matchedOn": "2025-09-28T04:17:26.612Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01997921-9d27-774e-906a-a230061cb016/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01997921-9d27-774e-906a-a230061cb016/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "TTim24th Sep 2025 - 10:31 amWaitlist Tivoli, 4305 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionSmall holes required for electrical cabling, 13 20mm holes in ceiling.What service do you require?Small clean upWhere is the asbestos located?CeilingWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$40 $20   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:26.612Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250925/20250925_32756237cdce6e10faf0978071ac5d4a",
+      "matchedOn": "2025-09-28T04:17:26.107Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250925/20250925_32756237cdce6e10faf0978071ac5d4a",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250925/20250925_6b7f63b19fdc75d0a43f4998527e2b4f",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250925/20250925_9620a6f5d64abe12c00623e4fac75cec",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01997e7e-4e49-7b9b-b6b2-e8e8e02018b2/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01997e7e-4e49-7b9b-b6b2-e8e8e02018b2/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "VVince25th Sep 2025 - 11:30 amWaitlist Clontarf, 4019 Small Asbestos Clean-UpsStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionLooking for a price to remove and dispose of asbestos on 3 walls \nMeasurements in photosWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?House3 AttachmentsJoin WaitlistDecline$50 $25   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:26.107Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01998025-f242-7c11-a278-bb1440b6a9a4/accept",
+      "matchedOn": "2025-09-28T04:17:25.498Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01998025-f242-7c11-a278-bb1440b6a9a4/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01998025-f242-7c11-a278-bb1440b6a9a4/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "LLinda25th Sep 2025 - 7:13 pmWaitlist Margate Beach, 4019 Asbestos RemovalStart ByNext few weeksContact Details Phone number verified Email address verifiedJob DescriptionAsbestos Removal Service\nKitchen walls and ceiling quote pleaseWhat service do you require?InspectionWhere is the asbestos located?Walls, CeilingWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$54 $27   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:25.498Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250928/20250928_9e2355e0bec4aa7c30f3f254deafcc74",
+      "matchedOn": "2025-09-28T04:17:24.799Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250928/20250928_9e2355e0bec4aa7c30f3f254deafcc74",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250928/20250928_866d1399e6012ab1cb01ae7eda18f492",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01998e82-4b62-7e58-a409-e171fc199d6d/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01998e82-4b62-7e58-a409-e171fc199d6d/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "DDavid28th Sep 2025 - 2:08 pmWaitlist Ferny Hills, 4055 Asbestos RemovalStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionAsbestos Removal Services.\n\n1 x Largish Room. Ceiling sheeting and wallsWhat service do you require?Small clean upWhere is the asbestos located?Walls, CeilingWhat type of job is this?Residential What type of dwelling is this?House2 AttachmentsJoin WaitlistDecline$50 $25   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-28T04:17:24.799Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/019931ca-1c29-7461-bc34-016eaa75e5b5/accept",
+      "matchedOn": "2025-09-10T04:02:39.231Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019931ca-1c29-7461-bc34-016eaa75e5b5/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019931ca-1c29-7461-bc34-016eaa75e5b5/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "NNikau10th Sep 2025 - 2:02 pm Zillmere, 4034 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionAsbestos Removal Services for walls of houseWhat service do you require?OtherWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseAcceptDecline$53  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-10T04:02:39.231Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01992cd6-9cef-781b-8a69-2dd1977a3aa1/accept",
+      "matchedOn": "2025-09-09T04:58:18.658Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01992cd6-9cef-781b-8a69-2dd1977a3aa1/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01992cd6-9cef-781b-8a69-2dd1977a3aa1/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "CCaitlin9th Sep 2025 - 2:58 pm Woody Point, 4019 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?ShedWhat type of job is this?Residential What type of dwelling is this?OtherAcceptDecline$53  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-09T04:58:18.658Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250908/20250908_1f01a4089433cbe3acd86ae46735e86f",
+      "matchedOn": "2025-09-08T05:02:26.023Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250908/20250908_1f01a4089433cbe3acd86ae46735e86f",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250908/20250908_ef02391d99127e5d0240f20b82217049",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250908/20250908_1ae2f85eb1637c4c3761c3b7f6682b46",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250908/20250908_29a01081f30e6dcc1a41ea628fc2f04c",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250908/20250908_347495bd37dc73c010ed6dfc11cbfc3c",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019927b4-18a0-733c-8794-53410d71a3b5/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019927b4-18a0-733c-8794-53410d71a3b5/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "TThomas8th Sep 2025 - 3:02 pm Balmoral, 4171 Asbestos RemovalStart ByI'm flexibleContact Details Phone number verified Email address verifiedJob DescriptionExternal fittings on house removed5 AttachmentsAcceptDecline$50  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-08T05:02:26.023Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/0199239b-92ff-7f65-b5c0-28872df02eb9/accept",
+      "matchedOn": "2025-09-07T09:57:11.400Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199239b-92ff-7f65-b5c0-28872df02eb9/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199239b-92ff-7f65-b5c0-28872df02eb9/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "RRiley7th Sep 2025 - 7:57 pm Geebung, 4034 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionAsbestosWhat service do you require?Small clean upWhere is the asbestos located?UnsureWhat type of job is this?Residential What type of dwelling is this?HouseAcceptDecline$43  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-07T09:57:11.400Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/019912c9-05f9-7e18-a127-3a550b2711b4/accept",
+      "matchedOn": "2025-09-04T03:33:27.350Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019912c9-05f9-7e18-a127-3a550b2711b4/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019912c9-05f9-7e18-a127-3a550b2711b4/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "RRuby4th Sep 2025 - 1:33 pm Redcliffe, 4020 DemolitionStart ByASAPContact Details Contact details: SuppliedJob DescriptionDemolition ExpertHow many stories is your dwelling?Single storeyDo you have council approval for this job?Not requiredResidential or commercial job?Residential What type of building needs to be demolished?HouseWhat is the scope of the job?Internal Strip OutApproximate area sizeUp to 10 sqmIs there easy access to the building?Yes, there is easy accessAcceptDecline$43  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-04T03:33:27.350Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01990f0f-eeac-79f3-b0b5-943c460c80c2/accept",
+      "matchedOn": "2025-09-04T03:12:08.932Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990f0f-eeac-79f3-b0b5-943c460c80c2/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990f0f-eeac-79f3-b0b5-943c460c80c2/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "AAlexander3rd Sep 2025 - 8:12 pmWaitlist Chermside, 4032 Asbestos RemovalStart ByNext few daysContact Details Phone number verified Email address verifiedJob DescriptionAsbestos Removal ServicesWhat service do you require?Inspection, Site decontamination, Air monitoringWhere is the asbestos located?UnsureWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$53  - Lead Invitation",
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.520Z",
+          "datetime_changed": "2025-09-04T03:12:08.932Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
-      "id": "https://tradiecore.hipages.com.au/leads/0198bbc8-d58f-710a-b04b-148392f6f742/accept",
-      "matchedOn": "2025-09-01T01:23:13.456Z",
+      "id": "https://attachments.hipagesusercontent.com/20250904/20250904_6b29a2656bbe02487de3f21a0f00d1f2",
+      "matchedOn": "2025-09-04T03:12:08.881Z",
       "links": [
         {
-          "href": "https://tradiecore.hipages.com.au/leads/0198bbc8-d58f-710a-b04b-148392f6f742/accept",
+          "href": "https://attachments.hipagesusercontent.com/20250904/20250904_6b29a2656bbe02487de3f21a0f00d1f2",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250904/20250904_2529eb83ba997d6235e812b2b0b5259d",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250904/20250904_2fb63ab10820c0cf1c2b79e059dc0407",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250904/20250904_12d241c7d90474aaccb6c479efb79b4c",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250904/20250904_38f6c4393e0191f62e9db020708606ce",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01991255-0b94-7971-81fe-301c9a48ea88/accept",
           "text": "Join Waitlist"
         },
         {
-          "href": "https://tradiecore.hipages.com.au/leads/0198bbc8-d58f-710a-b04b-148392f6f742/decline",
+          "href": "https://tradiecore.hipages.com.au/leads/01991255-0b94-7971-81fe-301c9a48ea88/decline",
           "text": "Decline"
         }
       ],
-      "content": "AAlex18th Aug 2025 - 4:05 pmWaitlist Kenmore, 4069 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionAsbestos RemovalWhat service do you require?Commercial clean upWhere is the asbestos located?Walls, Ceiling, RoofWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$48  - Lead Invitation",
+      "content": "Kklynton4th Sep 2025 - 11:26 amWaitlist Hendra, 4011 DemolitionStart ByNext few monthsContact Details Contact details: SuppliedJob Descriptionfull house demolitionHow many stories is your dwelling?Single storeyDo you have council approval for this job?YesResidential or commercial job?Residential What type of building needs to be demolished?HouseWhat is the scope of the job?Full buildingApproximate area size100 - 200 sqmIs there easy access to the building?Yes, there is easy access5 AttachmentsJoin WaitlistDecline$50  - Lead Invitation",
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.456Z",
+          "datetime_changed": "2025-09-04T03:12:08.881Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01990c61-04f3-7287-b240-ef83f408cac7/accept",
+      "matchedOn": "2025-09-03T00:49:38.803Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990c61-04f3-7287-b240-ef83f408cac7/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990c61-04f3-7287-b240-ef83f408cac7/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "SSonia3rd Sep 2025 - 7:41 amWaitlist New Farm, 4005 Commercial Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat type of commercial building is this?ShopWhat service do you require?OtherWhere is the asbestos located?WallsJoin WaitlistDecline$45  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-03T00:49:38.803Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250902/20250902_f8a3733b107952cf837c28f798b4093b",
+      "matchedOn": "2025-09-02T04:52:50.238Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250902/20250902_f8a3733b107952cf837c28f798b4093b",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019908c5-12be-7878-b481-d1ddaea59933/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019908c5-12be-7878-b481-d1ddaea59933/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "SSteve2nd Sep 2025 - 2:52 pm Boondall, 4034 DemolitionStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionSmall demolitionHow many stories is your dwelling?OtherResidential or commercial job?Residential, Residential Type of workOtherAmount of work to be completedA single projectDo you have council approval for this job?Not requiredWhat type of building needs to be demolished?OtherWhat is the scope of the job?OtherApproximate area sizeNot sureIs there easy access to the building?Yes, there is easy access1 AttachmentAcceptDecline$50  - Lead Invitation",
+      "currentStatus": "Transitioned to Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T04:52:50.238Z",
+          "new_status": "Potential Lead"
+        },
+        {
+          "datetime_changed": "2025-09-02T04:54:21.658Z",
+          "new_status": "Transitioned to Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/0198c574-ba65-7e39-a3b2-9dcee026456a/accept",
+      "matchedOn": "2025-09-02T03:58:16.959Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0198c574-ba65-7e39-a3b2-9dcee026456a/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0198c574-ba65-7e39-a3b2-9dcee026456a/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "JJimmy20th Aug 2025 - 1:10 pmWaitlist Sunnybank Hills, 4109 Asbestos RemovalStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionI need a licensed asbestos removal contractor to safely remove and dispose of asbestos from my property.Where is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$44  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:58:16.959Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/0198d5ef-e122-7ccf-9990-efd0ed735605/accept",
+      "matchedOn": "2025-09-02T03:58:16.869Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0198d5ef-e122-7ccf-9990-efd0ed735605/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0198d5ef-e122-7ccf-9990-efd0ed735605/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "CChris23rd Aug 2025 - 5:58 pmWaitlist Clontarf, 4019 Asbestos DemolitionStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionWe want the asbestos eaves on the whole house removed and replaced including the carport. Facia boards may also require replacingJoin WaitlistDecline$42  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:58:16.869Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/0198fc9b-4e0b-78e6-aed9-6e0e4ece75e7/accept",
+      "matchedOn": "2025-09-02T03:58:16.777Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0198fc9b-4e0b-78e6-aed9-6e0e4ece75e7/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0198fc9b-4e0b-78e6-aed9-6e0e4ece75e7/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "PPoppy31st Aug 2025 - 6:11 amWaitlist Narangba, 4504 Strip OutsStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionDemolish existing walls In bedrooms and bathrooms and rebuild in areas to make space more functionalHow many stories is your dwelling?Single storeyDo you have council approval for this job?Not requiredResidential or commercial job?Residential What type of building needs to be demolished?HouseApproximate area size10 - 50 sqmIs there easy access to the building?Yes, there is easy accessJoin WaitlistDecline$38  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:58:16.777Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250902/20250902_c424a62378c14f10579a93c66b9ad051",
+      "matchedOn": "2025-09-02T03:58:16.688Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250902/20250902_c424a62378c14f10579a93c66b9ad051",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019906ed-eca8-7dba-884d-403e4c7d7738/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019906ed-eca8-7dba-884d-403e4c7d7738/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "FFiona2nd Sep 2025 - 6:18 amWaitlist Basin Pocket, 4305 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionI would like to add windows to an existing window frame which requires cutting through the asbestos wall.What service do you require?OtherWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?House1 AttachmentJoin WaitlistDecline$43  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:58:16.688Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198c203-c59b-7e7d-8029-a5b162ea4e61/accept",
-      "matchedOn": "2025-09-01T01:23:13.393Z",
+      "matchedOn": "2025-09-02T03:57:15.921Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198c203-c59b-7e7d-8029-a5b162ea4e61/accept",
@@ -61,14 +677,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.393Z",
+          "datetime_changed": "2025-09-02T03:57:15.921Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198cef4-98e8-74ca-a524-0a572acaa47f/accept",
-      "matchedOn": "2025-09-01T01:23:13.320Z",
+      "matchedOn": "2025-09-02T03:57:15.855Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198cef4-98e8-74ca-a524-0a572acaa47f/accept",
@@ -83,14 +699,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.320Z",
+          "datetime_changed": "2025-09-02T03:57:15.855Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198d483-2f9e-7dd8-884b-b89eec98fa10/accept",
-      "matchedOn": "2025-09-01T01:23:13.256Z",
+      "matchedOn": "2025-09-02T03:57:15.771Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198d483-2f9e-7dd8-884b-b89eec98fa10/accept",
@@ -105,14 +721,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.256Z",
+          "datetime_changed": "2025-09-02T03:57:15.771Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://attachments.hipagesusercontent.com/20250823/20250823_3329cec75d3089402f8d3e6cdebd4c75",
-      "matchedOn": "2025-09-01T01:23:13.192Z",
+      "matchedOn": "2025-09-02T03:57:15.705Z",
       "links": [
         {
           "href": "https://attachments.hipagesusercontent.com/20250823/20250823_3329cec75d3089402f8d3e6cdebd4c75",
@@ -135,14 +751,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.192Z",
+          "datetime_changed": "2025-09-02T03:57:15.705Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198d636-2960-7c5f-8599-412877ee6b89/accept",
-      "matchedOn": "2025-09-01T01:23:13.136Z",
+      "matchedOn": "2025-09-02T03:57:15.638Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198d636-2960-7c5f-8599-412877ee6b89/accept",
@@ -157,14 +773,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.136Z",
+          "datetime_changed": "2025-09-02T03:57:15.638Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://attachments.hipagesusercontent.com/20250825/20250825_1367209ba70bac0d2459c52b3ce4e454",
-      "matchedOn": "2025-09-01T01:23:13.071Z",
+      "matchedOn": "2025-09-02T03:57:15.571Z",
       "links": [
         {
           "href": "https://attachments.hipagesusercontent.com/20250825/20250825_1367209ba70bac0d2459c52b3ce4e454",
@@ -199,14 +815,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.071Z",
+          "datetime_changed": "2025-09-02T03:57:15.571Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198e4e8-2e55-7ecc-87e1-5dcb389a1006/accept",
-      "matchedOn": "2025-09-01T01:23:13.009Z",
+      "matchedOn": "2025-09-02T03:57:15.507Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198e4e8-2e55-7ecc-87e1-5dcb389a1006/accept",
@@ -221,14 +837,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:13.009Z",
+          "datetime_changed": "2025-09-02T03:57:15.507Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198e916-3f19-7c50-9c54-cb4d7a504d8f/accept",
-      "matchedOn": "2025-09-01T01:23:12.935Z",
+      "matchedOn": "2025-09-02T03:57:15.421Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198e916-3f19-7c50-9c54-cb4d7a504d8f/accept",
@@ -243,14 +859,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.935Z",
+          "datetime_changed": "2025-09-02T03:57:15.421Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198e939-d2c4-7e88-9e5c-8492245ba26b/accept",
-      "matchedOn": "2025-09-01T01:23:12.872Z",
+      "matchedOn": "2025-09-02T03:57:15.338Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198e939-d2c4-7e88-9e5c-8492245ba26b/accept",
@@ -265,14 +881,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.872Z",
+          "datetime_changed": "2025-09-02T03:57:15.338Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198e952-f806-7059-957e-3451daa1b0b1/accept",
-      "matchedOn": "2025-09-01T01:23:12.792Z",
+      "matchedOn": "2025-09-02T03:57:15.255Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198e952-f806-7059-957e-3451daa1b0b1/accept",
@@ -287,14 +903,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.792Z",
+          "datetime_changed": "2025-09-02T03:57:15.255Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://attachments.hipagesusercontent.com/20250828/20250828_5978223cd7b3f41dc98d874e4b63c5b6",
-      "matchedOn": "2025-09-01T01:23:12.720Z",
+      "matchedOn": "2025-09-02T03:57:15.188Z",
       "links": [
         {
           "href": "https://attachments.hipagesusercontent.com/20250828/20250828_5978223cd7b3f41dc98d874e4b63c5b6",
@@ -317,14 +933,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.720Z",
+          "datetime_changed": "2025-09-02T03:57:15.188Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198ee38-c710-7a49-bc97-428eb97f9e74/accept",
-      "matchedOn": "2025-09-01T01:23:12.656Z",
+      "matchedOn": "2025-09-02T03:57:15.121Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198ee38-c710-7a49-bc97-428eb97f9e74/accept",
@@ -339,14 +955,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.656Z",
+          "datetime_changed": "2025-09-02T03:57:15.121Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://attachments.hipagesusercontent.com/20250828/20250828_a340980c3ee1ca252531a904e409d9b9",
-      "matchedOn": "2025-09-01T01:23:12.593Z",
+      "matchedOn": "2025-09-02T03:57:15.055Z",
       "links": [
         {
           "href": "https://attachments.hipagesusercontent.com/20250828/20250828_a340980c3ee1ca252531a904e409d9b9",
@@ -369,14 +985,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.593Z",
+          "datetime_changed": "2025-09-02T03:57:15.055Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://attachments.hipagesusercontent.com/20250828/20250828_1f06a9455d4f2b6b24856011e1a0a820",
-      "matchedOn": "2025-09-01T01:23:12.520Z",
+      "matchedOn": "2025-09-02T03:57:14.988Z",
       "links": [
         {
           "href": "https://attachments.hipagesusercontent.com/20250828/20250828_1f06a9455d4f2b6b24856011e1a0a820",
@@ -399,14 +1015,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.520Z",
+          "datetime_changed": "2025-09-02T03:57:14.988Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198f324-2f90-7d03-ac7e-90d6c06b97ab/accept",
-      "matchedOn": "2025-09-01T01:23:12.456Z",
+      "matchedOn": "2025-09-02T03:57:14.905Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198f324-2f90-7d03-ac7e-90d6c06b97ab/accept",
@@ -421,14 +1037,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.456Z",
+          "datetime_changed": "2025-09-02T03:57:14.905Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198f3bd-b65f-7718-abf2-6b6262090346/accept",
-      "matchedOn": "2025-09-01T01:23:12.392Z",
+      "matchedOn": "2025-09-02T03:57:14.838Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198f3bd-b65f-7718-abf2-6b6262090346/accept",
@@ -443,14 +1059,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.392Z",
+          "datetime_changed": "2025-09-02T03:57:14.838Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198f7f0-4686-7c90-a58b-848f4c7a9fc6/accept",
-      "matchedOn": "2025-09-01T01:23:12.335Z",
+      "matchedOn": "2025-09-02T03:57:14.771Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198f7f0-4686-7c90-a58b-848f4c7a9fc6/accept",
@@ -465,14 +1081,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.335Z",
+          "datetime_changed": "2025-09-02T03:57:14.771Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198f86d-1e8b-7ab1-8d09-f4a527100c51/accept",
-      "matchedOn": "2025-09-01T01:23:12.272Z",
+      "matchedOn": "2025-09-02T03:57:14.705Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198f86d-1e8b-7ab1-8d09-f4a527100c51/accept",
@@ -487,14 +1103,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.272Z",
+          "datetime_changed": "2025-09-02T03:57:14.705Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198f8e9-cda9-71d3-aed0-700d199ae261/accept",
-      "matchedOn": "2025-09-01T01:23:12.191Z",
+      "matchedOn": "2025-09-02T03:57:14.638Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198f8e9-cda9-71d3-aed0-700d199ae261/accept",
@@ -509,40 +1125,14 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:12.191Z",
-          "new_status": "Already Waitlisted"
-        }
-      ]
-    },
-    {
-      "id": "",
-      "matchedOn": "2025-09-01T01:23:12.025Z",
-      "links": [
-        {
-          "href": "",
-          "text": "View more"
-        },
-        {
-          "href": "https://tradiecore.hipages.com.au/leads/0198fc9b-4e0b-78e6-aed9-6e0e4ece75e7/accept",
-          "text": "Join Waitlist"
-        },
-        {
-          "href": "https://tradiecore.hipages.com.au/leads/0198fc9b-4e0b-78e6-aed9-6e0e4ece75e7/decline",
-          "text": "Decline"
-        }
-      ],
-      "content": "PPoppy31st Aug 2025 - 6:11 amWaitlist Narangba, 4504 Strip OutsStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionDemolish existing walls In bedrooms and bathrooms and rebuild in areas to make space more functionalView moreHow many stories is your dwelling?Single storeyDo you have council approval for this job?Not requiredResidential or commercial job?Residential What type of building needs to be demolished?HouseApproximate area size10 - 50 sqmIs there easy access to the building?Yes, there is easy accessJoin WaitlistDecline$38  - Lead Invitation",
-      "currentStatus": "Already Waitlisted",
-      "statusHistory": [
-        {
-          "datetime_changed": "2025-09-01T01:23:12.025Z",
+          "datetime_changed": "2025-09-02T03:57:14.638Z",
           "new_status": "Already Waitlisted"
         }
       ]
     },
     {
       "id": "https://tradiecore.hipages.com.au/leads/0198ff7a-d1bd-742e-a0f3-ef3036d891d1/accept",
-      "matchedOn": "2025-09-01T01:23:11.931Z",
+      "matchedOn": "2025-09-02T03:57:14.576Z",
       "links": [
         {
           "href": "https://tradiecore.hipages.com.au/leads/0198ff7a-d1bd-742e-a0f3-ef3036d891d1/accept",
@@ -557,7 +1147,251 @@
       "currentStatus": "Already Waitlisted",
       "statusHistory": [
         {
-          "datetime_changed": "2025-09-01T01:23:11.931Z",
+          "datetime_changed": "2025-09-02T03:57:14.576Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01990370-7b14-7009-b90e-f110905c43e5/accept",
+      "matchedOn": "2025-09-02T03:57:14.506Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990370-7b14-7009-b90e-f110905c43e5/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990370-7b14-7009-b90e-f110905c43e5/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "MMARTINA1st Sep 2025 - 2:02 pmWaitlist Nambour, 4560 Asbestos RemovalStart ByI'm flexibleContact Details Contact details: SuppliedJob DescriptionAsbestos Removal of bathroom ceiling and if possible install new ceilingWhat service do you require?OtherWhere is the asbestos located?CeilingWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$40  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.506Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01990391-2a1c-7a54-9399-2a8b9ed835ae/accept",
+      "matchedOn": "2025-09-02T03:57:14.438Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990391-2a1c-7a54-9399-2a8b9ed835ae/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990391-2a1c-7a54-9399-2a8b9ed835ae/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "PPradeep1st Sep 2025 - 2:37 pmWaitlist Greenbank, 4124 Strip OutsStart ByASAPContact Details Contact details: SuppliedJob DescriptionDe fit Indian restaurantHow many stories is your dwelling?Single storeyDo you have council approval for this job?Not sure whether it's neededResidential or commercial job?CommercialApproximate area size50 - 100 sqmIs there easy access to the building?Yes, there is easy accessJoin WaitlistDecline$40  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.438Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250901/20250901_1f0ed533395ff0035d30f4e9cb72a078",
+      "matchedOn": "2025-09-02T03:57:14.371Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250901/20250901_1f0ed533395ff0035d30f4e9cb72a078",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019903d3-fb70-7966-b48d-8ce10a62e30c/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019903d3-fb70-7966-b48d-8ce10a62e30c/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "TToni1st Sep 2025 - 3:50 pmWaitlist Clontarf, 4019 Asbestos DemolitionStart ByNext few monthsContact Details Phone number verified Email address verifiedJob DescriptionShe’d demolish and removalWhat service do you require?Site decontamination, OtherWhere is the asbestos located?Shed1 AttachmentJoin WaitlistDecline$42  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.371Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250901/20250901_16e9ea5381dc9af65ff7aae8fe05629b",
+      "matchedOn": "2025-09-02T03:57:14.307Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250901/20250901_16e9ea5381dc9af65ff7aae8fe05629b",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990414-b365-770d-a31f-bcfd99a851fc/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990414-b365-770d-a31f-bcfd99a851fc/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "Zzackariah1st Sep 2025 - 5:01 pmWaitlist Caboolture South, 4510 DemolitionStart ByNext few monthsContact Details Contact details: SuppliedJob DescriptionDemolition Experts just wanting my steel car port dismantled and I will keep the scrapHow many stories is your dwelling?OtherDo you have council approval for this job?NoResidential or commercial job?Residential What type of building needs to be demolished?OtherWhat is the scope of the job?OtherApproximate area sizeNot sureIs there easy access to the building?Yes, there is easy access1 AttachmentJoin WaitlistDecline$43  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.307Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://attachments.hipagesusercontent.com/20250901/20250901_bff89774fddfbf9d4a8d2daf4ac5cba0",
+      "matchedOn": "2025-09-02T03:57:14.243Z",
+      "links": [
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250901/20250901_bff89774fddfbf9d4a8d2daf4ac5cba0",
+          "text": ""
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250901/20250901_5d92945c4e135061e3d71013dfda5576",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990421-66fc-7dcd-8834-9e9bf672c769/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990421-66fc-7dcd-8834-9e9bf672c769/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "RRodney1st Sep 2025 - 5:15 pmWaitlist Capalaba, 4157 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionAsbestos Removal ServicesWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?House2 AttachmentsJoin WaitlistDecline$43  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.243Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01990443-da1d-7cdb-8176-e4f8329f6034/accept",
+      "matchedOn": "2025-09-02T03:57:14.172Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990443-da1d-7cdb-8176-e4f8329f6034/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01990443-da1d-7cdb-8176-e4f8329f6034/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "SSharon1st Sep 2025 - 5:53 pmWaitlist Parkwood, 4214 DemolitionStart ByNext few monthsContact Details Contact details: SuppliedJob DescriptionOld fence demolished andctaken awayHow many stories is your dwelling?Single storeyDo you have council approval for this job?NoResidential or commercial job?Residential What type of building needs to be demolished?HouseWhat is the scope of the job?OtherApproximate area sizeUp to 10 sqmIs there easy access to the building?There is restricted accessJoin WaitlistDecline$42  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.172Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/019904f0-f8cb-7102-8bb8-cfeee70eabb5/accept",
+      "matchedOn": "2025-09-02T03:57:14.096Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019904f0-f8cb-7102-8bb8-cfeee70eabb5/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019904f0-f8cb-7102-8bb8-cfeee70eabb5/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "SSiavash1st Sep 2025 - 9:02 pmWaitlist North Lakes, 4509 DemolitionStart ByI'm flexibleContact Details Phone number verified Email address verifiedJob DescriptionNon bearing wall demoliti9n and disposalHow many stories is your dwelling?Single storeyDo you have council approval for this job?Not sure whether it's neededResidential or commercial job?Residential What type of building needs to be demolished?HouseWhat is the scope of the job?Internal Strip OutApproximate area size10 - 50 sqmIs there easy access to the building?Yes, there is easy accessJoin WaitlistDecline$42  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.096Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "matchedOn": "2025-09-02T03:57:14.030Z",
+      "links": [
+        {
+          "href": "",
+          "text": "View more"
+        },
+        {
+          "href": "https://attachments.hipagesusercontent.com/20250902/20250902_c424a62378c14f10579a93c66b9ad051",
+          "text": ""
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019906ed-eca8-7dba-884d-403e4c7d7738/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019906ed-eca8-7dba-884d-403e4c7d7738/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "FFiona2nd Sep 2025 - 6:18 amWaitlist Basin Pocket, 4305 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionI would like to add windows to an existing window frame which requires cutting through the asbestos wall.View moreWhat service do you require?OtherWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?House1 AttachmentJoin WaitlistDecline$43  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:14.030Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/019907e8-9038-7dd8-9b68-af14f62c2178/accept",
+      "matchedOn": "2025-09-02T03:57:13.955Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019907e8-9038-7dd8-9b68-af14f62c2178/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019907e8-9038-7dd8-9b68-af14f62c2178/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "AAlastair2nd Sep 2025 - 10:51 amWaitlist Mount Gravatt East, 4122 Asbestos RemovalStart ByNext few daysContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$42  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:13.955Z",
+          "new_status": "Already Waitlisted"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/0199081f-2540-7600-b027-13ec6e2b5586/accept",
+      "matchedOn": "2025-09-02T03:57:13.873Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199081f-2540-7600-b027-13ec6e2b5586/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199081f-2540-7600-b027-13ec6e2b5586/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "KKris2nd Sep 2025 - 11:51 amWaitlist Lota, 4179 Asbestos RemovalStart ByNext few daysContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?RoofWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$48  - Lead Invitation",
+      "currentStatus": "Already Waitlisted",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-09-02T03:57:13.873Z",
           "new_status": "Already Waitlisted"
         }
       ]
