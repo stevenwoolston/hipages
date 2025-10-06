@@ -26,6 +26,8 @@ const {
 	HIPAGES_LEADS_URL,
 	TIME_WINDOW_START,
 	TIME_WINDOW_END,
+	DAILY_MATCHES_LIMIT,
+	MORNING_MATCHES_LIMIT,
 	EMAIL_HOST,
 	EMAIL_PORT,
 	EMAIL_USER,
@@ -45,6 +47,9 @@ const START_HOUR = parseInt(TIME_WINDOW_START?.split(':')[0] || '8', 10);
 const START_MINUTE = parseInt(TIME_WINDOW_START?.split(':')[1] || '0', 10);
 const END_HOUR = parseInt(TIME_WINDOW_END?.split(':')[0] || '18', 10);
 const END_MINUTE = parseInt(TIME_WINDOW_END?.split(':')[1] || '0', 10);
+
+const DAILY_LIMIT = parseInt(DAILY_MATCHES_LIMIT || '6', 10);
+const MORNING_LIMIT = parseInt(MORNING_MATCHES_LIMIT || '3', 10);
 
 // --- SETUP FILE PATHS ---
 const __filename = fileURLToPath(import.meta.url);
@@ -252,9 +257,10 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 					newMatchFoundThisCycle = true;
 					const now = new Date();
 					const timestamp = now.toISOString().replace(/[:.]/g, '-');
+					console.log(`[${new Date().toLocaleString()}] ✅ NEW MATCH FOUND - Status: ${scrapedArticle.status}`);
+					console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the lead page.`);
 					await page.screenshot({ path: `src/screenshots/${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
 					cacheUpdated = true;
-					console.log(`[${new Date().toLocaleString()}] ✅ NEW MATCH FOUND - Status: ${scrapedArticle.status}`);
 					const nowISO = new Date().toISOString();
 					const newLead: MatchedLead = {
 						id: scrapedArticle.id,
@@ -271,14 +277,20 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 							const acceptLink = newLead.links.find(link => link.text.includes('Accept'));
 							// click acceptLink, get the HTML of the resulting page and take a screenshot of the resulting page
 							if (acceptLink && acceptLink.href) {
-								console.log(`[${new Date().toLocaleString()}] Found Potential Lead. The accept link is: ${acceptLink?.href}`);								
+								console.log(`[${new Date().toLocaleString()}] Found Potential Lead. The accept link is: ${acceptLink?.href}. Navigating there now.`);
+								const preAcceptPageContent = await page.content();
+								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page before accepting.`);
+								await fs.writeFile(`src/screenshots/leads/preAcceptLead-${new Date().toISOString().replace(/[:.]/g, '-')}.html`, preAcceptPageContent, 'utf-8');
+								await page.screenshot({ path: `src/screenshots/leads/preAcceptLead-${new Date().toISOString().replace(/[:.]/g, '-')}.png`, fullPage: true, captureBeyondViewport: true });
+
 								await page.goto(acceptLink.href);
 								sleep(1500);
+
 								await page.keyboard.press('Enter');	// Accept modal
 								const now = new Date();
 								const timestamp = now.toISOString().replace(/[:.]/g, '-');
 								const pageContent = await page.content();
-								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the acceptance page.`);
+								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after accepting.`);
 								await fs.writeFile(`src/screenshots/leads/acceptLead-${timestamp}.html`, pageContent, 'utf-8');
 								await page.screenshot({ path: `src/screenshots/leads/acceptLead-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
 								sleep(5000);
@@ -395,17 +407,17 @@ async function main() {
 				}
 			}
 
-			if (todaysMatches.length >= 2) {
+			if (todaysMatches.length >= DAILY_LIMIT) {
 				const tomorrow = new Date();
 				tomorrow.setDate(now.getDate() + 1);
 				const sleepUntil = getWindowTimes(tomorrow).start;
 				const sleepDuration = sleepUntil.getTime() - now.getTime();
-				console.log(`\n[${new Date().toLocaleString()}] Daily limit of 2 potential leads reached. Idling until the next window at ${sleepUntil.toLocaleTimeString()}`);
+				console.log(`\n[${new Date().toLocaleString()}] Daily limit of ${DAILY_LIMIT} potential leads reached. Idling until the next window at ${sleepUntil.toLocaleTimeString()}`);
 				await sleep(sleepDuration);
 				continue;
 			}
 
-			if (todaysMatches.length === 2) {
+			if (todaysMatches.length === MORNING_LIMIT) {
 				const firstMatchTime = new Date(todaysMatches[0].matchedOn);
 				const noon = new Date();
 				noon.setHours(12, 0, 0, 0);
