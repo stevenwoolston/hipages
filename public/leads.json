@@ -1,6 +1,72 @@
 {
   "matchedLeads": [
     {
+      "id": "https://tradiecore.hipages.com.au/leads/0199b820-808f-7764-9c5b-42cd8fd2efde/accept",
+      "matchedOn": "2025-10-06T06:06:08.719Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199b820-808f-7764-9c5b-42cd8fd2efde/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199b820-808f-7764-9c5b-42cd8fd2efde/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "JJacinta6th Oct 2025 - 4:06 pm East Brisbane, 4169 Asbestos RemovalStart ByNext few weeksContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseAcceptDecline$32 $16   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-10-06T06:06:08.719Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/0199b79b-6339-7bce-a0f0-0f617f94c60a/accept",
+      "matchedOn": "2025-10-06T03:40:46.970Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199b79b-6339-7bce-a0f0-0f617f94c60a/accept",
+          "text": "Accept"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/0199b79b-6339-7bce-a0f0-0f617f94c60a/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "JJason6th Oct 2025 - 1:40 pm Moorooka, 4105 Asbestos RemovalStart ByNext few monthsContact Details Contact details: SuppliedJob DescriptionAsbestos removalWhat service do you require?Small clean upWhere is the asbestos located?CeilingWhat type of job is this?Residential What type of dwelling is this?HouseAcceptDecline$34 $17   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-10-06T03:40:46.970Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
+      "id": "https://tradiecore.hipages.com.au/leads/01999d2b-944e-7d23-96e5-2a292c17e43f/accept",
+      "matchedOn": "2025-10-01T10:58:37.730Z",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01999d2b-944e-7d23-96e5-2a292c17e43f/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/01999d2b-944e-7d23-96e5-2a292c17e43f/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "OOscar1st Oct 2025 - 10:28 amWaitlist Woolloongabba, 4102 Asbestos RemovalStart ByASAPContact Details Contact details: SuppliedJob DescriptionRemoval of approximate 15m2 of asbestosWhat service do you require?Small clean upWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$32 $16   - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "2025-10-01T10:58:37.730Z",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
       "id": "https://tradiecore.hipages.com.au/leads/01999967-f0fc-70e2-af24-f4ae947b9073/accept",
       "matchedOn": "2025-09-30T07:06:36.281Z",
       "links": [
