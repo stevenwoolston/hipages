@@ -273,35 +273,85 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 					cache.matchedLeads.unshift(newLead);
 
 					if (newLead.currentStatus === 'Potential Lead') {
-						try {
-							const acceptLink = newLead.links.find(link => link.text.includes('Accept'));
-							// click acceptLink, get the HTML of the resulting page and take a screenshot of the resulting page
-							if (acceptLink && acceptLink.href) {
-								console.log(`[${new Date().toLocaleString()}] Found Potential Lead. The accept link is: ${acceptLink?.href}. Navigating there now.`);
-								const preAcceptPageContent = await page.content();
-								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page before accepting.`);
-								await fs.writeFile(`src/screenshots/leads/preAcceptLead-${new Date().toISOString().replace(/[:.]/g, '-')}.html`, preAcceptPageContent, 'utf-8');
-								await page.screenshot({ path: `src/screenshots/leads/preAcceptLead-${new Date().toISOString().replace(/[:.]/g, '-')}.png`, fullPage: true, captureBeyondViewport: true });
+            try {
+              const preAcceptLink = newLead.links.find(link => link.text.includes('Accept'));
 
-								await page.goto(acceptLink.href);
-								sleep(1500);
+              if (preAcceptLink && preAcceptLink.href) {
+                console.log(`[${new Date().toLocaleString()}] Found Potential Lead. The accept link is: ${preAcceptLink?.href}. Navigating there now.`);
+                
+                // Screenshot of the page *before* navigation (optional, kept for context)
+                const preAcceptPageContent = await page.content();
+                console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page before accepting.`);
+                await fs.writeFile(`src/screenshots/leads/preAcceptLead-${new Date().toISOString().replace(/[:.]/g, '-')}.html`, preAcceptPageContent, 'utf-8');
+                await page.screenshot({ path: `src/screenshots/leads/preAcceptLead-${new Date().toISOString().replace(/[:.]/g, '-')}.png`, fullPage: true, captureBeyondViewport: true });
 
-								await page.keyboard.press('Enter');	// Accept modal
-								const now = new Date();
-								const timestamp = now.toISOString().replace(/[:.]/g, '-');
-								const pageContent = await page.content();
-								console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after accepting.`);
-								await fs.writeFile(`src/screenshots/leads/acceptLead-${timestamp}.html`, pageContent, 'utf-8');
-								await page.screenshot({ path: `src/screenshots/leads/acceptLead-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
-								sleep(5000);
-								await page.reload({ waitUntil: 'networkidle2' });
-							}
-						} catch (err) {
-							console.error(`[${new Date().toLocaleString()}] ☠️ ERROR processing new lead ${newLead.id}:`, err);
-						} finally {
-							await sendEmailNotification(newLead);
-						}
-					}
+                // 1. Navigate to the Lead Detail/Acceptance Page
+                await page.goto(preAcceptLink.href, { waitUntil: 'domcontentloaded' });
+                
+                // --- ROBUST ACCEPT CLICK LOGIC ---
+                const acceptLinkXPath = "//a[text()='Accept']"; 
+                const acceptButtonSelector = `xpath/${acceptLinkXPath}`; // The modern selector prefix for waiting
+                
+                console.log(`[${new Date().toLocaleString()}] Waiting for and clicking the 'Accept' button.`);
+                
+                // 2. Wait for the button using the modern, supported selector method.
+                await page.waitForSelector(acceptButtonSelector, { 
+                    visible: true, 
+                    timeout: 10000 
+                }); 
+
+                // 3. Retrieve the element handle using the standard XPath method, ignoring TypeScript error.
+                // @ts-ignore is used here to bypass the outdated type definitions for $x in v22.
+                // The syntax 'await page.$x(...)' is how you execute XPath in Puppeteer's runtime.
+                const [acceptLink] = await page.$x(acceptLinkXPath);
+
+                if (acceptLink) {
+                    // 4. Click the button/link on the acceptance page
+                    await acceptLink.click();
+                    console.log(`[${new Date().toLocaleString()}] Successfully clicked the 'Accept' button.`);
+
+                    // 5. Use the existing sleep utility to pause for the modal to render
+                    sleep(2000); 
+
+                } else {
+                    console.log(`[${new Date().toLocaleString()}] ⚠️ The final 'Accept' button was not found.`);
+                }
+                // --- END ROBUST ACCEPT CLICK LOGIC ---
+                
+                // The rest of your original logic follows
+                const now = new Date();
+                const timestamp = now.toISOString().replace(/[:.]/g, '-');
+                const pageContent = await page.content();
+                console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after accepting.`);
+                await fs.writeFile(`src/screenshots/leads/acceptLead-${timestamp}.html`, pageContent, 'utf-8');
+                await page.screenshot({ path: `src/screenshots/leads/acceptLead-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
+                sleep(5000);
+
+
+                // 6. Send 'Enter' to confirm the modal (assuming a simple modal appeared)
+								try {
+									await page.keyboard.press('Enter'); // Accept modal (Maybe)
+									sleep(1000);
+									const postEnterNow = new Date();
+									const postEnterTimestamp = postEnterNow.toISOString().replace(/[:.]/g, '-');
+									const postEnterPageContent = await page.content();
+									console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after pressing enter.`);
+									await fs.writeFile(`src/screenshots/leads/postAcceptLead-${postEnterTimestamp}.html`, postEnterPageContent, 'utf-8');
+									await page.screenshot({ path: `src/screenshots/leads/postAcceptLead-${postEnterTimestamp}.png`, fullPage: true, captureBeyondViewport: true });
+									sleep(5000);
+								} catch (e) {
+									console.error(`[${new Date().toLocaleString()}] Error pressing Enter to confirm modal:`, e);
+								}
+
+                await page.goto(HIPAGES_LEADS_URL!, { waitUntil: 'networkidle2' });
+              }
+            } catch (err) {
+              console.error(`[${new Date().toLocaleString()}] ☠️ ERROR processing new lead ${newLead.id}:`, err);
+            } finally {
+              await sendEmailNotification(newLead);
+            }
+          }
+
 				}
 			} else {
 				// --- EXISTING LEAD LOGIC ---
