@@ -197,7 +197,7 @@ async function sendEmailNotification(lead: MatchedLead, elapsedTime?: string) {
 async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 	let newMatchFoundThisCycle = false;
 	try {
-		// console.log(`\n[${new Date().toLocaleString()}] Reloading page and searching for leads...`);
+		console.log(`\n[${new Date().toLocaleString()}] Reloading page and searching for leads...`);
 		await page.reload({ waitUntil: 'networkidle2' });
 		const leadsOnPage = await page.$$eval('article', (leads, keywords, matchType) => {
 			return leads.map(article => {
@@ -246,7 +246,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 			});
 		}, KEYWORD_ARRAY, MATCH_TYPE);
 
-		// console.log(`[${new Date().toLocaleString()}] Found ${leadsOnPage.length} leads on the page. Checking for matches...`);
+		console.log(`[${new Date().toLocaleString()}] Found ${leadsOnPage.length} leads on the page. Checking for matches...`);
 		let cacheUpdated = false;
 		for (const scrapedArticle of leadsOnPage) {
 			const existingLeadIndex = cache.matchedLeads.findIndex(l => l.id === scrapedArticle.id);
@@ -311,7 +311,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
                     console.log(`[${new Date().toLocaleString()}] Successfully clicked the 'Accept' button.`);
 
                     // 5. Use the existing sleep utility to pause for the modal to render
-                    sleep(2000); 
+                    await sleep(2000); 
 
                 } else {
                     console.log(`[${new Date().toLocaleString()}] ⚠️ The final 'Accept' button was not found.`);
@@ -325,20 +325,20 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
                 console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after accepting.`);
                 await fs.writeFile(`src/screenshots/leads/acceptLead-${timestamp}.html`, pageContent, 'utf-8');
                 await page.screenshot({ path: `src/screenshots/leads/acceptLead-${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
-                sleep(5000);
+                await sleep(5000);
 
 
                 // 6. Send 'Enter' to confirm the modal (assuming a simple modal appeared)
 								try {
 									await page.keyboard.press('Enter'); // Accept modal (Maybe)
-									sleep(1000);
+									await sleep(1000);
 									const postEnterNow = new Date();
 									const postEnterTimestamp = postEnterNow.toISOString().replace(/[:.]/g, '-');
 									const postEnterPageContent = await page.content();
 									console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after pressing enter.`);
 									await fs.writeFile(`src/screenshots/leads/postAcceptLead-${postEnterTimestamp}.html`, postEnterPageContent, 'utf-8');
 									await page.screenshot({ path: `src/screenshots/leads/postAcceptLead-${postEnterTimestamp}.png`, fullPage: true, captureBeyondViewport: true });
-									sleep(5000);
+									await sleep(5000);
 								} catch (e) {
 									console.error(`[${new Date().toLocaleString()}] Error pressing Enter to confirm modal:`, e);
 								}
@@ -380,9 +380,9 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 
 		if (cacheUpdated) {
 			await writeCache(cache);
-			console.log(`[${new Date().toLocaleString()}] Cache updated. Waiting for ${CHECK_INTERVAL_MS / 1000} seconds...`);
+			console.log(`[${new Date().toLocaleString()}] Cache updated.`);
 		} else {
-			// console.log(`[${new Date().toLocaleString()}] No new leads or status changes found this cycle.`);
+			console.log(`[${new Date().toLocaleString()}] No new leads or status changes found this cycle.`);
 		}
 	} catch (error) {
 		console.error('An error occurred during the page processing:', error);
@@ -479,10 +479,10 @@ async function main() {
 				}
 			}
 
-			// console.log(`\n[${new Date().toLocaleString()}] Within operating hours and under daily limit. Starting scrape cycle.`);
+			//console.log(`\n[${new Date().toLocaleString()}] Within operating hours and under daily limit. Starting scrape cycle.`);
 			await performScrapeCycle(page, cache);
 
-			// console.log(`[${new Date().toLocaleString()}] --- Cycle complete. Waiting for ${CHECK_INTERVAL_MS / 1000} seconds... ---`);
+			console.log(`[${new Date().toLocaleString()}] --- Cycle complete. Waiting for ${CHECK_INTERVAL_MS / 1000} seconds... ---`);
 			await sleep(CHECK_INTERVAL_MS);
 		}
 	} catch (error) {
