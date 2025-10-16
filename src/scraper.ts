@@ -197,7 +197,7 @@ async function sendEmailNotification(lead: MatchedLead, elapsedTime?: string) {
 async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 	let newMatchFoundThisCycle = false;
 	try {
-		console.log(`\n[${new Date().toLocaleString()}] Reloading page and searching for leads...`);
+		// console.log(`\n[${new Date().toLocaleString()}] Reloading page and searching for leads...`);
 		await page.reload({ waitUntil: 'networkidle2' });
 		const leadsOnPage = await page.$$eval('article', (leads, keywords, matchType) => {
 			return leads.map(article => {
@@ -246,7 +246,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 			});
 		}, KEYWORD_ARRAY, MATCH_TYPE);
 
-		console.log(`[${new Date().toLocaleString()}] Found ${leadsOnPage.length} leads on the page. Checking for matches...`);
+		// console.log(`[${new Date().toLocaleString()}] Found ${leadsOnPage.length} leads on the page. Checking for matches...`);
 		let cacheUpdated = false;
 		for (const scrapedArticle of leadsOnPage) {
 			const existingLeadIndex = cache.matchedLeads.findIndex(l => l.id === scrapedArticle.id);
@@ -380,9 +380,9 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 
 		if (cacheUpdated) {
 			await writeCache(cache);
-			console.log(`[${new Date().toLocaleString()}] Cache updated.`);
+			console.log(`[${new Date().toLocaleString()}] Cache updated. Waiting for ${CHECK_INTERVAL_MS / 1000} seconds...`);
 		} else {
-			console.log(`[${new Date().toLocaleString()}] No new leads or status changes found this cycle.`);
+			// console.log(`[${new Date().toLocaleString()}] No new leads or status changes found this cycle.`);
 		}
 	} catch (error) {
 		console.error('An error occurred during the page processing:', error);
@@ -479,10 +479,10 @@ async function main() {
 				}
 			}
 
-			console.log(`\n[${new Date().toLocaleString()}] Within operating hours and under daily limit. Starting scrape cycle.`);
+			// console.log(`\n[${new Date().toLocaleString()}] Within operating hours and under daily limit. Starting scrape cycle.`);
 			await performScrapeCycle(page, cache);
 
-			console.log(`[${new Date().toLocaleString()}] --- Cycle complete. Waiting for ${CHECK_INTERVAL_MS / 1000} seconds... ---`);
+			// console.log(`[${new Date().toLocaleString()}] --- Cycle complete. Waiting for ${CHECK_INTERVAL_MS / 1000} seconds... ---`);
 			await sleep(CHECK_INTERVAL_MS);
 		}
 	} catch (error) {
