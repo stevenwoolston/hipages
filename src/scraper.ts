@@ -258,7 +258,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 				if (scrapedArticle.hasMatch && scrapedArticle.status) {
 					newMatchFoundThisCycle = true;
 					const now = new Date();
-					const timestamp = now.toLocaleString().replace(/[:.]/g, '-');
+					const timestamp = now.toISOString().replace(/[:.]/g, '-');
 					console.log(`[${new Date().toLocaleString()}] ✅ NEW MATCH FOUND - Status: ${scrapedArticle.status}`);
 					console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the lead page.`);
 					await page.screenshot({ path: `src/screenshots/${timestamp}.png`, fullPage: true, captureBeyondViewport: true });
@@ -333,7 +333,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
                 // 6. Send 'Enter' to confirm the modal (assuming a simple modal appeared)
 								try {
 									const preEnterNow = new Date();
-									const preEnterTimestamp = preEnterNow.toLocaleString().replace(/[:.]/g, '-');
+									const preEnterTimestamp = preEnterNow.toISOString().replace(/[:.]/g, '-');
 									const preEnterPageContent = await page.content();
 									console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page before clicking Accept.`);
 									await fs.writeFile(`src/screenshots/leads/preAcceptLead-${preEnterTimestamp}.html`, preEnterPageContent, 'utf-8');
@@ -344,7 +344,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 									await page.keyboard.press('Enter'); // Accept modal (Maybe)
 									await sleep(1000);
 									const postEnterNow = new Date();
-									const postEnterTimestamp = postEnterNow.toLocaleString().replace(/[:.]/g, '-');
+									const postEnterTimestamp = postEnterNow.toISOString().replace(/[:.]/g, '-');
 									const postEnterPageContent = await page.content();
 									console.log(`[${new Date().toLocaleString()}] Taking a screenshot of the page after accepting linking and pressing enter.`);
 									await fs.writeFile(`src/screenshots/leads/postAcceptLead-${postEnterTimestamp}.html`, postEnterPageContent, 'utf-8');
@@ -373,7 +373,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 					cacheUpdated = true;
 					newMatchFoundThisCycle = true;
 
-					const nowISO = new Date().toLocaleString();
+					const nowISO = new Date().toISOString();
 					const newStatus: LeadStatus = 'Transitioned to Waitlisted';
 
 					existingLead.currentStatus = newStatus;
