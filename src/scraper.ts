@@ -247,6 +247,7 @@ async function performScrapeCycle(page: Page, cache: Cache): Promise<boolean> {
 			});
 		}, KEYWORD_ARRAY, MATCH_TYPE);
 
+		console.log(`[${new Date().toLocaleString()}] DEBUGGING: leads on the page. ${JSON.stringify(leadsOnPage)}`);
 		console.log(`[${new Date().toLocaleString()}] Found ${leadsOnPage.length} leads on the page. Checking for matches...`);
 		let cacheUpdated = false;
 		for (const scrapedArticle of leadsOnPage) {
