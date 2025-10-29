@@ -1,6 +1,28 @@
 {
   "matchedLeads": [
     {
+      "id": "https://tradiecore.hipages.com.au/leads/019a3211-901a-7fa0-9dbd-89f29b92acb0/accept",
+      "matchedOn": "30/10/2025, 8:24:19 am",
+      "links": [
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019a3211-901a-7fa0-9dbd-89f29b92acb0/accept",
+          "text": "Join Waitlist"
+        },
+        {
+          "href": "https://tradiecore.hipages.com.au/leads/019a3211-901a-7fa0-9dbd-89f29b92acb0/decline",
+          "text": "Decline"
+        }
+      ],
+      "content": "MMohammad30th Oct 2025 - 8:23 amWaitlist Marsden, 4132 Asbestos RemovalStart ByASAPContact Details Phone number verified Email address verifiedJob DescriptionAsbestos Removal ServicesWhat service do you require?OtherWhere is the asbestos located?WallsWhat type of job is this?Residential What type of dwelling is this?HouseJoin WaitlistDecline$50  - Lead Invitation",
+      "currentStatus": "Potential Lead",
+      "statusHistory": [
+        {
+          "datetime_changed": "30/10/2025, 8:24:19 am",
+          "new_status": "Potential Lead"
+        }
+      ]
+    },
+    {
       "id": "https://tradiecore.hipages.com.au/leads/019a2920-cb0e-7a90-bd56-ff89bf7e4f40/accept",
       "matchedOn": "28/10/2025, 2:43:58 pm",
       "links": [
