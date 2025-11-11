@@ -1,32 +1,26 @@
 {
-  "name": "hipages-asbestos-scraper",
-  "private": true,
-  "version": "0.0.1",
-  "description": "A script to scrape hipages for leads containing a custom keyword and a React UI to display them.",
-  "type": "module",
+  "name": "job-lead-auto-scraper",
+  "version": "1.0.0",
+  "description": "An automated scraper using Puppeteer and Nodemailer to find and accept new job leads on a specific platform.",
+  "main": "index.js",
   "scripts": {
-    "start": "source $HOME/.nvm/nvm.sh; nvm use 18 && concurrently \"npm:scrape\" \"npm:ui\"",
-    "scrape": "node --loader ts-node/esm src/scraper.ts",
-    "ui": "vite",
-    "build": "source $HOME/.nvm/nvm.sh; nvm use 18 && tsc && vite build",
-    "preview": "vite preview"
+    "start": "node index.js",
+    "dev": "echo 'Starting in development/debug mode...' && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "puppeteer",
+    "scraper",
+    "automation",
+    "job-leads",
+    "nodejs",
+    "nodemailer"
+  ],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "dotenv": "16.4.5",
-    "nodemailer": "6.9.13",
-    "puppeteer": "22.10.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "20.12.12",
-    "@types/nodemailer": "6.4.15",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "@vitejs/plugin-react": "4.3.0",
-    "concurrently": "8.2.2",
-    "ts-node": "10.9.2",
-    "typescript": "5.4.5",
-    "vite": "5.2.12"
+    "dotenv": "^17.2.3",
+    "nodemailer": "^7.0.10",
+    "puppeteer": "^24.27.0"
   }
 }

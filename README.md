@@ -1,63 +1,59 @@
-# hi-pages Scraper 🤖
+🤖 Job Lead Auto-Accept Scraper
+Overview
+This project is an automated Node.js script designed to monitor a specified web platform for new job leads. It uses Puppeteer for browser automation (login, navigation, and clicking) and Nodemailer for sending immediate email notifications when a lead is successfully accepted.
 
-This project is an automated scraper designed to monitor the **hi-pages** website for new leads. It uses **Puppeteer** to navigate and scrape content based on customizable keywords. When a potential lead is found, it saves the details and sends an **email notification**. The project also includes a **React-based UI** for viewing the scraped leads.
+The script runs continuously on a configurable interval, ensuring time-sensitive leads are processed quickly and automatically.
 
----
+Key Features ✨
+Automated Authentication: Logs in using credentials securely managed via environment variables.
 
-## ✨ Features
+Scheduled Monitoring: Runs in a persistent loop, reloading the leads page at a set interval (default: 30 seconds).
 
--   **Automated Scraping:** Continuously monitors the hi-pages website for new job postings.
--   **Keyword Matching:** Scans job descriptions for specific keywords (e.g., "asbestos").
--   **Real-time Notifications:** Sends an email notification via **Nodemailer** when a new lead is detected.
--   **Lead Status Tracking:** Tracks leads and detects status changes, such as a lead moving to the "Waitlisted" status.
--   **Configurable Settings:** All key parameters like keywords, email settings, and scraping intervals are managed via a `.env` file.
--   **React UI:** A simple front-end application to display all scraped leads in a user-friendly format.
+Targeted Acceptance: Searches for HTML <article> elements and clicks the associated acceptance link (specifically, an <a> tag with the text content "Accept").
 
----
+Email Notifications: Sends an immediate email alert detailing the accepted lead's title.
 
-## 🚀 Getting Started
+Debugging Tools: Takes screenshots upon login failure and before/after accepting a lead to aid in verification and debugging.
 
-### Prerequisites
+CommonJS Syntax: Uses standard require() syntax for broader Node.js compatibility.
 
--   Node.js (version 18 or higher)
--   npm (Node Package Manager)
+Prerequisites 📋
+Node.js (LTS version recommended)
 
-### Installation
+npm or yarn
 
-1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/your-username/hipages-asbestos-scraper.git](https://github.com/your-username/hipages-asbestos-scraper.git)
-    cd hipages-asbestos-scraper
-    ```
-2.  Install the project dependencies:
-    ```bash
-    npm install
-    ```
+Installation and Setup 🔧
+Clone the Repository:
 
-### Configuration
+Bash
 
-Create a file named `.env` in the root of the project and add your configuration details. This is where you'll store your login credentials, email settings, and scraping preferences.
+git clone [your-repo-link]
+cd [your-repo-folder]
+Install Dependencies:
 
-```dotenv
-# hipages Credentials
-HIPAGES_USERNAME="your-hipages-email"
-HIPAGES_PASSWORD="your-hipages-password"
-HIPAGES_LEADS_URL="[https://app.hipages.com.au/leads/my-leads](https://app.hipages.com.au/leads/my-leads)"
+Install the necessary packages, including Puppeteer, dotenv, and Nodemailer.
 
-# Scraper Settings
-# Time window for scraping (in 24-hour format)
-TIME_WINDOW_START="08:00"
-TIME_WINDOW_END="18:00"
-# Scraper interval in seconds
-SCRAPER_INTERVAL_SECONDS="60"
-# Keywords to search for, comma-separated
-KEYWORDS="asbestos,demolition,removal"
-# Match type: 'all' requires all keywords; 'each' requires at least one
-KEYWORD_MATCH_TYPE="each" 
+Bash
 
-# Email Notification Settings
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_PORT="465"
-EMAIL_USER="your-email@gmail.com"
-EMAIL_PASS="your-email-app-password"
-EMAIL_TO="recipient-email@example.com"
+npm install
+Configure Environment Variables:
+
+Create a file named .env in the root directory to securely store all configuration parameters. Do not commit this file to Git.
+
+Bash
+
+# --- Web Platform Configuration ---
+LEADS_URL="https://your-leads-platform.com/login"
+USERNAME="your_platform_username"
+PASSWORD="your_platform_password"
+
+# Optional: Set the monitoring frequency in seconds
+SCRAPER_INTERVAL_SECONDS=30 
+
+# --- Email (Nodemailer) Configuration ---
+EMAIL_TO="notification_recipient@example.com"
+EMAIL_HOST="smtp.your-provider.com"
+EMAIL_PORT=587 
+EMAIL_USER="your_smtp_username"
+EMAIL_PASS="your_smtp_app_password" 
+⚠️ Security Note: If you are using Gmail or similar providers, you may need to generate an App Password for EMAIL_PASS instead of using your main account password.
