@@ -198,20 +198,19 @@ async function scrapeAndAcceptLeads(page) {
 			await sleep(500);
 			
 			await page.keyboard.press('Enter');	//	Confirm acceptance
-			console.log('  - Next step completed. Taking final screenshot.');
+			console.log('  - Next step completed. Taking acceptance screenshot.');
 			await page.screenshot({ path: `screenshots/${leadTitle.replace(/\s+/g, '_')}_post_accepted.png` });
 			
 			await sleep(1000);
 			await page.keyboard.press('Enter');	// View Job Details
-			// THIS IS NOT WORKING - MODAL STAYS OPEN
-			// await page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 2000 });
 
-			console.log('  - Viewing Job details. Taking final screenshot.');
+			console.log('  - Viewing Job details. Taking confirmation screenshot.');
 			await sleep(1000);
 			await page.screenshot({ path: `screenshots/${leadTitle.replace(/\s+/g, '_')}_job_details.png` });
 
 			acceptedCount++;
 			console.log(`✅ Successfully accepted lead: "${leadTitle}".`);
+			await page.goto(LEADS_URL);
 		} catch (error) {
 			console.error(`❌ Failed to click or process lead "${leadTitle}":`, error.message);
 		}
