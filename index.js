@@ -112,7 +112,7 @@ async function login(page) {
 	} catch (error) {
 		console.error('❌ Login failed or page selectors need adjustment:', error.message);
 		// Take a screenshot for debugging if login fails
-		await page.screenshot({ path: 'login_error.png' });
+		await page.screenshot({ path: 'screenshots/login_error.png' });
 		console.log('Screenshot saved to login_error.png for debugging.');
 		throw new Error('Login process failed.');
 	}
