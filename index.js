@@ -97,8 +97,8 @@ async function login(page) {
 	try {
 		await page.waitForSelector(usernameSelector, { timeout: 10000 });
 		console.log('    - Entering credentials...');
-		await page.type(usernameSelector, USERNAME);
-		await page.type(passwordSelector, PASSWORD);
+		await page.fill(usernameSelector, USERNAME);
+		await page.fill(passwordSelector, PASSWORD);
 
 		console.log('    - Clicking login button...');
 		// Wait for navigation after clicking the submit button
