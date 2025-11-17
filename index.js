@@ -1,19 +1,21 @@
 /**
- * Job Leads Scraper using Puppeteer and Nodemailer
+ * Job Leads Scraper using Puppeteer, Nodemailer, and JSON Caching
  *
  * This script runs on an interval to log into a specified URL,
  * find job lead articles with an "Accept" link, click them,
- * and send an email notification upon acceptance.
- *
- * NOTE: This version uses CommonJS 'require()' syntax for compatibility with
- * standard Node.js execution without needing 'type: "module"' in package.json.
+ * and send an email notification upon acceptance. It uses a local
+ * 'leads.json' file to persist accepted leads across restarts.
  */
 // Load environment variables from .env file
 require('dotenv').config();
 
-// Switched to CommonJS 'require' syntax
 const puppeteer = require('puppeteer');
 const nodemailer = require('nodemailer');
+const fs = require('fs/promises'); // Use promises for async file operations
+const path = require('path');
+
+// --- Caching Configuration ---
+const LEADS_CACHE_FILE = path.join(__dirname, 'leads.json');
 
 // --- Configuration from Environment Variables ---
 const LEADS_URL = process.env.LEADS_URL;
@@ -38,6 +40,47 @@ const transporter = nodemailer.createTransport({
     pass: EMAIL_PASS
   }
 });
+
+/**
+ * Loads the set of previously accepted lead titles from the JSON cache file.
+ * @returns {Promise<Set<string>>} - A promise that resolves to the Set of accepted lead titles.
+ */
+async function loadAcceptedLeads() {
+  try {
+    const data = await fs.readFile(LEADS_CACHE_FILE, 'utf8');
+    const titles = JSON.parse(data);
+    if (Array.isArray(titles)) {
+      console.log(`\n📚 Loaded ${titles.length} accepted leads from ${LEADS_CACHE_FILE}.`);
+      return new Set(titles);
+    }
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      // File does not exist, which is expected on first run
+      console.log(`📝 Cache file not found (${LEADS_CACHE_FILE}). Starting with empty cache.`);
+    } else if (error instanceof SyntaxError) {
+      console.error(`❌ Corrupt cache file! Deleting and restarting cache. Error: ${error.message}`);
+      await fs.writeFile(LEADS_CACHE_FILE, '[]', 'utf8'); // Reset file
+    } else {
+      console.error('❌ Failed to load accepted leads from cache:', error.message);
+    }
+  }
+  return new Set();
+}
+
+/**
+ * Saves the current set of accepted lead titles to the JSON cache file.
+ * @param {Set<string>} acceptedLeadTitles - The Set of accepted lead titles.
+ */
+async function saveAcceptedLeads(acceptedLeadTitles) {
+  try {
+    // Convert the Set back to an Array for JSON serialization
+    const titlesArray = Array.from(acceptedLeadTitles);
+    await fs.writeFile(LEADS_CACHE_FILE, JSON.stringify(titlesArray, null, 2), 'utf8');
+    console.log(`💾 Saved ${titlesArray.length} leads to ${LEADS_CACHE_FILE}.`);
+  } catch (error) {
+    console.error('❌ Failed to save accepted leads to cache:', error.message);
+  }
+}
 
 /**
  * Sends an email notification about a successful lead acceptance.
@@ -79,8 +122,6 @@ async function sleep(ms) {
 
 /**
  * Executes the login procedure.
- * Assumes the login form has input fields with IDs or names for username and password,
- * and a submit button. Adjust selectors if necessary.
  * @param {puppeteer.Page} page - The Puppeteer page instance.
  */
 async function login(page) {
@@ -90,14 +131,14 @@ async function login(page) {
   console.log('✅ Login successful (navigation detected).');
   return;
   
-  // The rest of the login logic is commented out in the original code, 
-  // keeping it commented out for consistency.
+  // Login logic remains commented out per original script
 }
 
 /**
  * The main scraping and accepting logic.
  * @param {puppeteer.Page} page - The Puppeteer page instance.
  * @param {Set<string>} acceptedLeadTitles - The cache of already accepted lead titles.
+ * @returns {Promise<number>} - The count of accepted leads in this run.
  */
 async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
   let acceptedCount = 0;
@@ -127,7 +168,6 @@ async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
   // Step 1: Filter articles in the browser context and prepare click targets by adding a unique temporary ID.
   for (const articleHandle of articleHandles) {
 
-    // Use page.evaluate to run code inside the browser on the specific articleHandle element
     const leadInfo = await page.evaluate(el => {
       // Find the 'Accept' link using standard DOM API
       const acceptLink = Array.from(el.querySelectorAll('a')).find(a => a.textContent.trim() === 'Accept');
@@ -135,9 +175,6 @@ async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
 
       const h2 = el.querySelector('h2');
       const title = h2 ? h2.textContent.trim() : 'Lead with no title found';
-      
-      // Check if the title is empty or too generic before proceeding
-      if (!title || title.length < 5) return null; 
 
       // Generate and set a unique ID attribute on the link element for re-selection from Node
       const tempId = 'scraper-click-' + Math.random().toString(36).substring(2, 9);
@@ -148,12 +185,10 @@ async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
 
 
     if (leadInfo) {
-      // --- CACHE IMPLEMENTATION START (Filtering) ---
       if (acceptedLeadTitles.has(leadInfo.title)) {
           console.log(`    - Skipping cached lead: "${leadInfo.title}"`);
           continue; // Skip this lead if its title is already in the cache
       }
-      // --- CACHE IMPLEMENTATION END (Filtering) ---
       
       leadsToClick.push(leadInfo);
     }
@@ -173,12 +208,9 @@ async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
 
   console.log(`\n🔔 Found new lead: "${leadTitle}"`);
 
-  // --- CACHE IMPLEMENTATION START (Adding to cache) ---
-  // Add the title to the cache immediately so if the script re-runs before the
-  // server updates, it won't be clicked again.
+  // Add the title to the cache immediately before clicking
   acceptedLeadTitles.add(leadTitle);
-  console.log(`    - Lead "${leadTitle}" added to cache.`);
-  // --- CACHE IMPLEMENTATION END (Adding to cache) ---
+  console.log(`    - Lead "${leadTitle}" added to in-memory cache.`);
 
   // Find the specific ElementHandle using the unique attribute selector
   const acceptLinkHandle = await page.$(selector);
@@ -202,14 +234,17 @@ async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
       await sleep(1000);
       await page.screenshot({ path: `screenshots/${leadTitle.replace(/\s+/g, '_')}_job_details.png` });
 
+      // *** PERSISTENCE POINT ***
+      await saveAcceptedLeads(acceptedLeadTitles);
+      // ************************
+      
       acceptedCount++;
       console.log(`✅ Successfully accepted lead: "${leadTitle}".`);
       await page.goto(LEADS_URL);
     } catch (error) {
       console.error(`❌ Failed to click or process lead "${leadTitle}":`, error.message);
-      // OPTIONAL: If clicking fails, you might want to remove it from the cache
-      // so the next cycle can retry, but this risks multiple clicks if the failure
-      // was a temporary page glitch. Sticking with keeping it cached for safety.
+      // Optional: If the click failed, you might consider removing the title from the cache
+      // if you want to retry later, but leaving it for safety usually prevents double acceptance.
     }
   }
 
@@ -225,11 +260,8 @@ async function startScraper() {
     return;
   }
   
-  // --- CACHE IMPLEMENTATION START (Initialization) ---
-  // Simple in-memory cache to store the titles of accepted leads.
-  // This will clear if the script is stopped and restarted.
-  const acceptedLeadTitles = new Set();
-  // --- CACHE IMPLEMENTATION END (Initialization) ---
+  // Load the persisted lead titles from the JSON file at startup
+  const acceptedLeadTitles = await loadAcceptedLeads();
 
   let browser;
   let scraperInterval;
@@ -247,9 +279,6 @@ async function startScraper() {
     const intervalJob = async () => {
       runCount++;
       console.log(`\n--- SCRAPING CYCLE ${runCount} STARTED (${new Date().toLocaleTimeString()}) ---`);
-      
-      // If the set gets too large, you might want to log its size here
-      // console.log(`Current cache size: ${acceptedLeadTitles.size}`);
 
       try {
         await page.reload({ waitUntil: 'domcontentloaded' });
@@ -289,6 +318,8 @@ async function startScraper() {
     if (browser) {
       await browser.close();
     }
+    // Ensure cache is saved on critical shutdown if possible
+    await saveAcceptedLeads(acceptedLeadTitles);
   }
 }
 
