@@ -186,7 +186,7 @@ async function scrapeAndAcceptLeads(page, acceptedLeadTitles) {
 
     if (leadInfo) {
       if (acceptedLeadTitles.has(leadInfo.title)) {
-          console.log(`    - Skipping cached lead: "${leadInfo.title}"`);
+          console.log(`    - Skipping ${acceptedLeadTitles.size} cached leads`);
           continue; // Skip this lead if its title is already in the cache
       }
       
